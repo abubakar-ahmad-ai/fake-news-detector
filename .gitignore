@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Dataset files (too large for GitHub)
+data/raw/Fake.csv
+data/raw/True.csv
+
+# OS files
+.DS_Store
+Thumbs.db

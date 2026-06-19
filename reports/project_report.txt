@@ -1,0 +1,226 @@
+================================================================
+        AI-BASED FAKE NEWS DETECTION SYSTEM
+              PROJECT REPORT
+================================================================
+
+================================================================
+1. ABSTRACT
+================================================================
+
+This project presents an AI-Based Fake News Detection System that
+automatically classifies news articles as real or fake using
+Machine Learning and Natural Language Processing techniques.
+
+The system uses Logistic Regression trained on 44,898 news
+articles from the Kaggle Dataset, achieving 99.14% accuracy.
+
+A modern desktop GUI built with CustomTkinter provides real-time
+predictions, confidence scores, prediction history, and an
+analytics dashboard with visual charts.
+
+================================================================
+2. PROBLEM STATEMENT
+================================================================
+
+Fake news spreads rapidly through social media and digital
+platforms, causing serious harm to society. Manual fact-checking
+is slow and impossible to scale.
+
+This project solves that problem by building an automated
+AI system that instantly analyzes news content and determines
+its authenticity with 99.14% accuracy.
+
+================================================================
+3. OBJECTIVES
+================================================================
+
+- Build complete ML pipeline for fake news classification
+- Implement NLP preprocessing using NLTK
+- Train and compare Logistic Regression vs Naive Bayes
+- Achieve high accuracy on real-world dataset
+- Develop modern desktop GUI application
+- Provide confidence scores for every prediction
+- Implement prediction history and analytics features
+
+================================================================
+4. DATASET
+================================================================
+
+Source         : Kaggle
+Dataset Name   : Fake and Real News Dataset
+Fake Articles  : 23,481  (Label = 0)
+Real Articles  : 21,417  (Label = 1)
+Total Articles : 44,898
+Features Used  : Title + Text (combined)
+
+================================================================
+5. NLP PREPROCESSING PIPELINE
+================================================================
+
+Step 1 : Lowercase conversion
+         "The GOVERNMENT" -> "the government"
+
+Step 2 : URL Removal
+         "Visit https://fake.com" -> "Visit"
+
+Step 3 : Special Character Removal
+         "fraud!!!" -> "fraud"
+
+Step 4 : Stopword Removal
+         "the government is lying" -> "government lying"
+
+Step 5 : Porter Stemming
+         "running" -> "run"
+         "elections" -> "elect"
+
+Result : 44,898 articles -> 44,889 clean articles
+         (9 empty articles removed)
+
+================================================================
+6. FEATURE ENGINEERING - TF-IDF
+================================================================
+
+Method         : TF-IDF Vectorization
+Vocabulary     : 50,000 features
+N-gram Range   : (1, 2) - unigrams and bigrams
+Training Shape : (35,911 x 50,000)
+
+TF  = Word count in document / Total words in document
+IDF = log(Total documents / Documents containing word)
+TF-IDF = TF x IDF
+
+Common words get LOW score  (not important)
+Rare words get HIGH score   (very important)
+
+================================================================
+7. MODEL TRAINING
+================================================================
+
+Train-Test Split : 80% Training / 20% Testing
+Training Samples : 35,911
+Testing Samples  : 8,978
+
+--- MODEL 1: LOGISTIC REGRESSION ---
+Algorithm    : Logistic Regression
+C            : 1.0 (regularization)
+max_iter     : 1000
+solver       : lbfgs
+
+--- MODEL 2: NAIVE BAYES ---
+Algorithm    : Multinomial Naive Bayes
+alpha        : 0.1 (smoothing)
+
+================================================================
+8. RESULTS & MODEL COMPARISON
+================================================================
+
+Metric       Logistic Regression    Naive Bayes
+-----------  -------------------    -----------
+Accuracy     99.14%  (WINNER)       96.39%
+Precision    98.94%                 96.50%
+Recall       99.28%                 96.01%
+F1-Score     99.11%                 96.25%
+
+BEST MODEL   : Logistic Regression
+REASON       : Higher accuracy, better confidence scores,
+               industry standard for text classification
+
+--- CONFUSION MATRIX (Logistic Regression) ---
+
+                   Predicted
+                   FAKE      REAL
+Actual FAKE     [  4598   |   46  ]
+Actual REAL     [    31   | 4303  ]
+
+True Negatives  (TN) : 4598
+False Positives (FP) :   46
+False Negatives (FN) :   31
+True Positives  (TP) : 4303
+
+Total Correct   : 8,901 / 8,978 = 99.14%
+Total Wrong     :    77 / 8,978 =  0.86%
+
+================================================================
+9. SYSTEM ARCHITECTURE
+================================================================
+
+GUI LAYER
+  CustomTkinter - Home, History, Analytics, About pages
+
+PREDICTION ENGINE
+  predictor.py -> preprocess -> vectorize -> predict
+
+ML MODEL LAYER
+  logistic_model.pkl + tfidf_vectorizer.pkl
+
+DATA LAYER
+  predictions.json + model_report.txt
+
+================================================================
+10. GUI FEATURES
+================================================================
+
+Home Page
+  - News text input area
+  - Analyze button
+  - FAKE/REAL prediction card
+  - Confidence % with progress bar
+  - Probability breakdown bars
+
+History Page
+  - Scrollable table of all predictions
+  - Timestamp, preview, verdict, confidence
+  - Clear all option
+
+Analytics Page
+  - Total analyzed count
+  - Fake vs Real count
+  - Average confidence score
+  - Pie chart - prediction distribution
+  - Bar chart - last 10 predictions
+
+About Page
+  - Project info and technologies
+  - Model performance stats
+
+================================================================
+11. TECHNOLOGIES USED
+================================================================
+
+Language       : Python 3.8+
+ML Framework   : Scikit-Learn
+NLP            : NLTK
+Vectorization  : TF-IDF
+GUI            : CustomTkinter
+Charts         : Matplotlib
+Data           : Pandas, NumPy
+Model Storage  : Joblib
+
+================================================================
+12. CONCLUSION
+================================================================
+
+The AI-Based Fake News Detection System successfully demonstrates
+Machine Learning and NLP for automated fake news detection.
+
+Key Achievements:
+- 99.14% accuracy on 44,898 real-world articles
+- Professional modern GUI with dark theme
+- Complete prediction pipeline in real-time
+- History and analytics features
+- Two models trained and compared professionally
+
+================================================================
+13. FUTURE IMPROVEMENTS
+================================================================
+
+- Deep Learning models (LSTM, BERT)
+- Real-time news API integration
+- Multi-language support (Urdu, Arabic)
+- Web deployment using Flask
+- Mobile application
+- Browser extension
+
+================================================================
+        END OF REPORT
+================================================================

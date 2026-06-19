@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2026-06-19 16:14:15",
+    "text_preview": "The United States Federal Reserve announced on Wednesday that it would keep interest rates unchanged at their current le...",
+    "label": "REAL",
+    "confidence": 0.5817,
+    "fake_probability": 0.4183,
+    "real_probability": 0.5817
+  },
+  {
+    "timestamp": "2026-06-19 16:13:29",
+    "text_preview": "BREAKING: Scientists at a secret government laboratory have confirmed that drinking hot water with lemon every morning c...",
+    "label": "FAKE",
+    "confidence": 0.9693,
+    "fake_probability": 0.9693,
+    "real_probability": 0.0307
+  },
+  {
+    "timestamp": "2026-06-19 16:09:37",
+    "text_preview": "Scientists have recently developed a new eco-friendly battery that can charge electric vehicles in less than 10 minutes....",
+    "label": "FAKE",
+    "confidence": 0.6051,
+    "fake_probability": 0.6051,
+    "real_probability": 0.3949
+  },
+  {
+    "timestamp": "2026-05-24 13:03:55",
+    "text_preview": "Researchers at a university engineering laboratory have announced progress on a new battery technology designed for lapt...",
+    "label": "FAKE",
+    "confidence": 0.5288,
+    "fake_probability": 0.5288,
+    "real_probability": 0.4712
+  },
+  {
+    "timestamp": "2026-05-24 13:00:15",
+    "text_preview": "Researchers have developed a new battery technology that may allow laptops to run for several weeks on a single charge. ...",
+    "label": "FAKE",
+    "confidence": 0.693,
+    "fake_probability": 0.693,
+    "real_probability": 0.307
+  },
+  {
+    "timestamp": "2026-05-24 12:59:35",
+    "text_preview": "The national weather department has forecast heavy rainfall in several northern areas this week, including Peshawar and ...",
+    "label": "REAL",
+    "confidence": 0.6796,
+    "fake_probability": 0.3204,
+    "real_probability": 0.6796
+  },
+  {
+    "timestamp": "2026-05-24 12:59:00",
+    "text_preview": "Scientists have confirmed that drinking hot water every morning for seven days can completely cure diabetes without any ...",
+    "label": "FAKE",
+    "confidence": 0.8371,
+    "fake_probability": 0.8371,
+    "real_probability": 0.1629
+  },
+  {
+    "timestamp": "2026-05-24 12:57:22",
+    "text_preview": "The government of Pakistan has announced a new education support program for public universities in 2026. According to o...",
+    "label": "FAKE",
+    "confidence": 0.6267,
+    "fake_probability": 0.6267,
+    "real_probability": 0.3733
+  },
+  {
+    "timestamp": "2026-05-24 12:54:19",
+    "text_preview": "Scientists say drinking hot water every morning can completely cure diabetes in 7 days",
+    "label": "FAKE",
+    "confidence": 0.89,
+    "fake_probability": 0.89,
+    "real_probability": 0.11
+  },
+  {
+    "timestamp": "2026-05-24 12:53:29",
+    "text_preview": "Pakistan government announces new education budget for public universities in 2026",
+    "label": "FAKE",
+    "confidence": 0.6095,
+    "fake_probability": 0.6095,
+    "real_probability": 0.3905
+  },
+  {
+    "timestamp": "2026-05-24 04:25:45",
+    "text_preview": "The Federal Reserve raised interest rates by 25 basis points on Wednesday, citing continued concerns about inflation. Fe...",
+    "label": "REAL",
+    "confidence": 0.7124,
+    "fake_probability": 0.2876,
+    "real_probability": 0.7124
+  },
+  {
+    "timestamp": "2026-05-24 04:24:42",
+    "text_preview": "SHOCKING: Scientists have discovered that 5G towers are secretly being used by the government to control people's minds ...",
+    "label": "FAKE",
+    "confidence": 0.9625,
+    "fake_probability": 0.9625,
+    "real_probability": 0.0375
+  }
+]

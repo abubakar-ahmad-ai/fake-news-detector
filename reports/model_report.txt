@@ -1,0 +1,17 @@
+FAKE NEWS DETECTION — MODEL EVALUATION REPORT
+==================================================
+
+Model     : Logistic Regression
+Accuracy  : 99.14%
+Precision : 0.9894
+Recall    : 0.9928
+F1-Score  : 0.9911
+--------------------------------------------------
+
+Model     : Naive Bayes
+Accuracy  : 96.39%
+Precision : 0.9650
+Recall    : 0.9601
+F1-Score  : 0.9625
+--------------------------------------------------
+
